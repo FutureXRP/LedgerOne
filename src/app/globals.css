@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-paper text-ink;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Money figures read best right-aligned and tabular. */
+.num {
+  font-variant-numeric: tabular-nums;
+  @apply font-mono text-right;
+}
+
+.card {
+  @apply rounded-lg border border-line bg-white p-5 shadow-sm;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-md px-3 py-1.5 text-sm font-medium transition;
+}
+.btn-primary {
+  @apply btn bg-ink text-white hover:bg-ink-soft;
+}
+.btn-ghost {
+  @apply btn border border-line bg-white text-ink-soft hover:bg-paper;
+}
+.btn-danger {
+  @apply btn border border-line bg-white text-ledger-red hover:bg-red-50;
+}
+
+.label {
+  @apply block text-xs font-medium uppercase tracking-wide text-ink-faint;
+}
+.input {
+  @apply w-full rounded-md border border-line bg-white px-3 py-2 text-sm outline-none focus:border-ink;
+}
+
+table.ledger {
+  @apply w-full border-collapse text-sm;
+}
+table.ledger th {
+  @apply border-b border-line px-3 py-2 text-left text-xs font-semibold uppercase tracking-wide text-ink-faint;
+}
+table.ledger td {
+  @apply border-b border-line px-3 py-2;
+}
