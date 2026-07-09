@@ -1,0 +1,18 @@
+# LedgerOne — Supabase project config (for `supabase` CLI).
+# project_id is set by `supabase link`. Kept minimal; single-tenant personal app.
+
+project_id = "ledgerone"
+
+[db]
+major_version = 15
+
+[auth]
+# Single user, email + password. No OAuth complexity (README Section 3).
+enable_signup = true
+[auth.email]
+enable_signup = true
+enable_confirmations = false
+
+[storage]
+# Receipt images, statement PDFs, generated tax packages (Phase 5).
+enabled = true
